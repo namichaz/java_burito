@@ -11,7 +11,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         // CORS設定をここで行う
         registry.addMapping("/**")  // 全てのエンドポイントに適用
-                .allowedOrigins("http://localhost:8080")  // Vue.jsが動作しているURLを許可
+                .allowedOrigins("http://localhost:5173")  // Vue.jsが動作しているURLを許可
                 .allowedMethods("GET", "POST", "PUT", "DELETE")  // 許可するHTTPメソッド
                 .allowedHeaders("*")  // 全てのヘッダーを許可
                 .allowCredentials(true);  // Cookieなどを送信する場合に必要
