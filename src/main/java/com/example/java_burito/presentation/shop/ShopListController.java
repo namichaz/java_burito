@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.java_burito.application.ShopListService;
+//import com.example.java_burito.application.ShopListService;
 import com.example.java_burito.domain.shop.Shop;
 import com.example.java_burito.presentation.shop.response.ShopListResponse;
 
