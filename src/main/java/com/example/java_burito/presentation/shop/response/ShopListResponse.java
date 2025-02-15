@@ -1,17 +1,15 @@
 package com.example.java_burito.presentation.shop.response;
 
-import java.util.List;
-
-import com.example.java_burito.domain.shop.Shop;
+import com.example.java_burito.domain.shop.ShopInfo;
 
 public class ShopListResponse {
-    private final List<Shop> shopList;
+    private final ShopInfo[] shopList;
 
-    public ShopListResponse(List<Shop> shopList) {
+    public ShopListResponse(ShopInfo[] shopList) {
         this.shopList = shopList;
     }
 
-    public List<Shop> getShopList() {
+    public ShopInfo[] getShopList() {
         return shopList;
     }
 }
