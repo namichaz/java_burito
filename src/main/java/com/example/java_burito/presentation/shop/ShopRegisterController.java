@@ -14,11 +14,7 @@ public class ShopRegisterController {
 	private final ShopRegisterService service;
 
     @PostMapping("/shops/info")
-    public ShopRegisterResponse shopRegister(@RequestBody ShopRegisterParam param) {
-    	System.out.println("param=" + param.getMenuItem());
-//    	if(shop.getShop_id() <= 0 || shop.getShop_name() == "")
-//    	if(address.getPrefecture() == "")
-//    	ShopInfo[] shopInfos = service.shopList();
+    public ShopRegisterResponse registerShopInfo(@RequestBody ShopRegisterParam param) {
     	
     	final boolean result = service.registerShopInfo(
     			param.getShopName(), 

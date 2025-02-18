@@ -1,4 +1,4 @@
-SELECT
+SELECT                         
     s.shop_id,
     s.shop_name,
     a.prefecture,
@@ -11,5 +11,6 @@ FROM stage.shops s
 INNER JOIN stage.address a ON s.shop_id = a.shop_id
 INNER JOIN stage.shops_menu sm ON s.shop_id = sm.shop_id
 INNER JOIN stage.mst_menu m ON sm.menu_id = m.menu_id
-where sm.show_flg is true
-GROUP BY s.shop_id, s.shop_name, a.prefecture, a.city, a.street,a.location;
+WHERE sm.show_flg IS TRUE
+GROUP BY s.shop_id, s.shop_name, a.prefecture, a.city, a.street, a.location
+ORDER BY s.shop_name ASC;
