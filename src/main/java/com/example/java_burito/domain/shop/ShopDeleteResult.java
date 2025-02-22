@@ -6,6 +6,7 @@ import com.example.java_burito.presentation.shop.response.ResultResponse;
 
 public enum ShopDeleteResult {
 	SUCCESS(0,HttpStatus.OK),
+	BADREQUEST(1,HttpStatus.BAD_REQUEST),
 	SHOP_NOT_FOUND(2,HttpStatus.NOT_FOUND),
 	FORBIDDEN(3,HttpStatus.FORBIDDEN),
 	FAILED(9,HttpStatus.INTERNAL_SERVER_ERROR);

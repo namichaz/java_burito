@@ -15,7 +15,7 @@ public class ShopRegisterController {
 
     @PostMapping("/shops/info")
     public ShopRegisterResponse registerShopInfo(@RequestBody ShopRegisterParam param) {
-    	
+    	if(param == null) return ShopRegisterResponse.invalidParamOf(); 
     	final boolean result = service.registerShopInfo(
     			param.getShopName(), 
     			Integer.parseInt(param.getShopId()), 
@@ -30,7 +30,10 @@ public class ShopRegisterController {
     	if(result) return ShopRegisterResponse.of(ShopRegisterResult.SUCCESS);
     	return ShopRegisterResponse.errorOf();
     	}
+    
+    
     public ShopRegisterController(ShopRegisterService service) {
     	this.service = service;
     }
+    
 }

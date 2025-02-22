@@ -14,7 +14,9 @@ public class ShopDeleteController {
 	
     @DeleteMapping("/shops/info/{shopId}")
     public ShopDeleteResponse deleteShopInfo(@PathVariable(value="shopId") int shopId) {
-		return ShopDeleteResponse.of(service.shopDelete(shopId));
+    	final ShopDeleteResponse result = ShopDeleteResponse.of(service.shopDelete(shopId));
+    	System.out.println("result:" + result.getResult());
+		return result;
     }
 
 	public ShopDeleteController(ShopDeleteService service) {

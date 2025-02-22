@@ -25,7 +25,6 @@ public class ShopRegisterDataSource implements ShopRegisterRepository {
 
 	@Override
 	public boolean shopMenuRegister(String shopName,String[] menuItems) {
-		 System.out.println("入ってるよ！！！！");
 		    var registerCount = 0;
 
 		    // enumの値を順番に取り出す
