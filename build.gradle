@@ -32,21 +32,21 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.apache.httpcomponents.client5:httpclient5:5.4.1'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '3.4.3'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '3.4.3'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '3.4.3'
+	testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '3.4.3'
+	
+	implementation group: 'org.postgresql', name: 'postgresql', version: '42.7.5'
+	implementation group: 'org.seasar.doma.boot', name: 'doma-spring-boot-starter', version: '2.1.0'
+	implementation group: 'org.seasar.doma', name: 'doma-core', version: '3.5.1'
+    annotationProcessor group: 'org.seasar.doma', name: 'doma-processor', version: '3.5.1'
     
-    runtimeOnly 'org.postgresql:postgresql'
-    implementation 'org.seasar.doma.boot:doma-spring-boot-starter:2.1.0'
-    implementation 'org.seasar.doma:doma-core:3.3.0'
-    annotationProcessor 'org.seasar.doma:doma-processor:3.3.0'
+	implementation group: 'jakarta.validation', name: 'jakarta.validation-api', version: '3.1.1'
+	implementation group: 'org.apache.httpcomponents.client5', name: 'httpclient5', version: '5.4.2'
     
-    implementation 'jakarta.validation:jakarta.validation-api:3.1.1'
-    
-    compileOnly 'org.projectlombok:lombok'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    annotationProcessor 'org.projectlombok:lombok'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.36'
+	annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.36'
     
     testImplementation group: 'org.mockito', name: 'mockito-core', version: '5.15.2'
 	testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '5.15.2'
