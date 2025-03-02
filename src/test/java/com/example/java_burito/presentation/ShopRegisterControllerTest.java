@@ -59,13 +59,11 @@ public class ShopRegisterControllerTest {
 
 	    doReturn(true).when(shopRegisterService).registerShopInfo(
 	            captorShopName.capture(),
-	            captorShopId.capture(),
 	            captorPrefecture.capture(),
 	            captorCity.capture(),
 	            captorStreet.capture(),
 	            captorLatitude.capture(),
 	            captorLongitude.capture(),
-	            captorShowFlg.capture(),
 	            captorMenuList.capture()
 	    );
 
@@ -78,18 +76,15 @@ public class ShopRegisterControllerTest {
 
 	    verify(shopRegisterService, times(1)).registerShopInfo(
 	            captorShopName.getValue(),
-	            captorShopId.getValue(),
 	            captorPrefecture.getValue(),
 	            captorCity.getValue(),
 	            captorStreet.getValue(),
 	            captorLatitude.getValue(),
 	            captorLongitude.getValue(),
-	            captorShowFlg.getValue(),
 	            captorMenuList.getValue()
 	    );
 
 	    assertEquals("shopName", captorShopName.getValue());
-	    assertEquals(1,captorShopId.getValue());
 	    assertEquals("大阪府",captorPrefecture.getValue());
 	    assertEquals("堺市北区",captorCity.getValue());
 	    assertEquals("仲通り1-22",captorStreet.getValue());
@@ -125,13 +120,11 @@ public class ShopRegisterControllerTest {
 
 	    doReturn(false).when(shopRegisterService).registerShopInfo(
 	            captorShopName.capture(),
-	            captorShopId.capture(),
 	            captorPrefecture.capture(),
 	            captorCity.capture(),
 	            captorStreet.capture(),
 	            captorLatitude.capture(),
 	            captorLongitude.capture(),
-	            captorShowFlg.capture(),
 	            captorMenuList.capture()
 	    );
 
@@ -144,18 +137,15 @@ public class ShopRegisterControllerTest {
 
 	    verify(shopRegisterService, times(1)).registerShopInfo(
 	            captorShopName.getValue(),
-	            captorShopId.getValue(),
 	            captorPrefecture.getValue(),
 	            captorCity.getValue(),
 	            captorStreet.getValue(),
 	            captorLatitude.getValue(),
 	            captorLongitude.getValue(),
-	            captorShowFlg.getValue(),
 	            captorMenuList.getValue()
 	    );
 
 	    assertEquals("shopName", captorShopName.getValue());
-	    assertEquals(1,captorShopId.getValue());
 	    assertEquals("大阪府",captorPrefecture.getValue());
 	    assertEquals("堺市北区",captorCity.getValue());
 	    assertEquals("仲通り1-22",captorStreet.getValue());

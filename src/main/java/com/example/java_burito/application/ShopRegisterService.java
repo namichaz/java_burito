@@ -11,8 +11,8 @@ private final ShopRegisterRepository shopRegisterRepository;
 	
 
 @Transactional
-public boolean registerShopInfo(String shopName,int shopId, String prefecture, String city, String street, Double latitude,
-			Double longitude, boolean showFlg, String[] menuItem) {
+public boolean registerShopInfo(String shopName, String prefecture, String city, String street, Double latitude,
+			Double longitude,  String[] menuItem) {
 	try {
 		return (
 				shopRegisterRepository.shopRegister(shopName) &&

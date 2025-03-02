@@ -18,13 +18,11 @@ public class ShopRegisterController {
     	if(param == null) return ShopRegisterResponse.invalidParamOf(); 
     	final boolean result = service.registerShopInfo(
     			param.getShopName(), 
-    			Integer.parseInt(param.getShopId()), 
     			param.getPrefecture(), 
     			param.getCity(), 
     			param.getStreet(), 
     			Double.parseDouble(param.getLatitude()), 
     			Double.parseDouble(param.getLongitude()), 
-    			true,
     			param.getMenuItem()
     			);
     	if(result) return ShopRegisterResponse.of(ShopRegisterResult.SUCCESS);
