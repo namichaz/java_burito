@@ -2,7 +2,6 @@ package com.example.java_burito.presentation.shop.param;
 
 public class ShopRegisterParam {
 
-    private String shopId;
     private String shopName;
     private String prefecture;
     private String city;
@@ -12,14 +11,6 @@ public class ShopRegisterParam {
     private String[] menuItem; // 配列として受け取るため List<String> を使う
 
     // 各フィールドの getter と setter を追加します
-
-    public String getShopId() {
-        return shopId;
-    }
-
-    public void setShopId(String shopId) {
-        this.shopId = shopId;
-    }
 
     public String getShopName() {
         return shopName;

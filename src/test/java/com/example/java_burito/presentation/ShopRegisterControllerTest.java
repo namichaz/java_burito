@@ -1,5 +1,6 @@
 package com.example.java_burito.presentation;
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
@@ -36,7 +37,6 @@ public class ShopRegisterControllerTest {
 	public void お店登録成功() throws Exception {
 		ShopRegisterParam param = new ShopRegisterParam();
 	    param.setShopName("shopName");
-	    param.setShopId(String.valueOf(1));
 	    param.setPrefecture("大阪府");
 	    param.setCity("堺市北区");
 	    param.setStreet("仲通り1-22");
@@ -97,7 +97,6 @@ public class ShopRegisterControllerTest {
 	public void お店登録失敗() throws Exception {
 		ShopRegisterParam param = new ShopRegisterParam();
 	    param.setShopName("shopName");
-	    param.setShopId(String.valueOf(1));
 	    param.setPrefecture("大阪府");
 	    param.setCity("堺市北区");
 	    param.setStreet("仲通り1-22");
@@ -156,13 +155,20 @@ public class ShopRegisterControllerTest {
 	
 	@Test
 	public void お店登録失敗_パラメータなし() throws Exception {
-  
 	    mvc.perform(MockMvcRequestBuilders.post("/shops/info"))
 	        .andDo(MockMvcResultHandlers.print())
 	        .andExpect(status().isBadRequest())
 	        .andReturn();
 
-	    verify(shopRegisterService, never());
+	    verify(shopRegisterService, never()).registerShopInfo(
+	            anyString(),
+	            anyString(),
+	            anyString(),
+	            anyString(),
+	            anyDouble(),
+	            anyDouble(),
+	            any()
+	    );
 	    }
 
 
