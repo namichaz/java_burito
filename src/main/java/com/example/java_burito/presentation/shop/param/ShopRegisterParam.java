@@ -67,4 +67,17 @@ public class ShopRegisterParam {
     public void setMenuItem(String[] menuItem) {
         this.menuItem = menuItem;
     }
+
+//	public ShopRegisterParam(@JsonProperty("shopName") String shopName, @JsonProperty("prefecture")String prefecture, @JsonProperty("city")String city,@JsonProperty("street") String street, @JsonProperty("latitude")String latitude,
+//			@JsonProperty("longitude")String longitude, @JsonProperty("menuItem")String[] menuItem) {
+//		this.shopName = shopName;
+//		this.prefecture = prefecture;
+//		this.city = city;
+//		this.street = street;
+//		this.latitude = latitude;
+//		this.longitude = longitude;
+//		this.menuItem = menuItem;
+//	}
+    
+    
 }
